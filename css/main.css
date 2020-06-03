@@ -193,11 +193,6 @@ aside {
   flex-flow: row wrap;
 }
 
-/*aside .content-wrapper {
-  display: flex;
-}*/
-
-
 /* Features */
 
 .features { 
@@ -220,7 +215,7 @@ aside {
 }
 
 .features article {
-  width: 55%;
+  width: 55%; 
   margin: 25px 0;
 }
 
@@ -244,10 +239,6 @@ aside {
   width: 60%;
 }
 
-/*article .review-content {
-  display: flex;
-}*/
-
 /* ==========================================================================
    About page 
    ========================================================================== */
@@ -261,10 +252,6 @@ aside {
   flex-flow: row wrap;
 }
 
-/*.mission-content {
-  display: flex;
-}*/
-
 /* Contact */
 
 .map figure {
@@ -277,10 +264,6 @@ aside {
   align-items: center;
   flex-flow: row wrap;
 }
-
-/*address .contact-content {
-  display: flex;
-}*/
 
 .contact-content p {
   margin: 0;
@@ -312,9 +295,9 @@ aside {
   margin: 0;
 }
 
-.faq h4 {
+/*.faq h4 { Note: consider delete
   margin: 0;
-}
+}*/ 
 
 .faq p {
   margin: 0;
@@ -409,15 +392,163 @@ aside {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+@media only screen and (min-width: 768px){
+  /* TABLET styles go here*/
+
+  /* General styles */
+
+  .content-wrapper { 
+    max-width: 640px;
+    margin: 100px 0;
+  }
+
+  /* Header */
+
+  header {
+    justify-content: center;
+    padding: 25px 0;
+  }
+
+  header .content-wrapper {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  header .header-divider {
+    display: none;
+  }
+
+  header nav {
+    width: 20%;
+  }
+
+  header nav ul {
+    justify-content: space-between;
+  }
+
+  /* Footer */
+
+  footer .content-wrapper {
+    width: 65%;
+    /*consider adding margin: 100px 0; as per instructions*/
+  }
+
+  footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  footer .social { /*note: solution code adds margin-bottom: 0; to footer .contact*/
+    margin: 0;
+  }
+
+  footer .copyright {
+    width: 100%;
+  }
+
+  /* Introduction */
+
+  .hero-area h1 {}
+
+  /* Aside */
+  
+  aside .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap; /*Why does it need to wrap?*/
+    margin: 45px 0;
+  }
+
+  aside .form-description {
+    width: 40%;
+    margin: 0;
+  }
+
+  aside .form {
+    width: 45%;
+    margin: 0;
+  }
+
+  /* Features */
+
+  .features h2 {
+    margin-bottom: 35px;
+  }
+
+  .features article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    flex-basis: 50%;
+  }
+
+  .features .features-item-description {
+    width: 50%;
+  }
+
+  /* Reviews */
+
+  .reviews .review-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .reviews img {
+    margin: 0;
+  }
+
+  .reviews .review-text {
+    width: 50%;
+  }
+
+  /* ==========================================================================
+   About page 
+   ========================================================================== */
+
+  .mission-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .mission-content p {
+    width: 47%;
+  } 
+
+  .contact-section .content-wrapper h2 {
+    width: 80%;
+  }
+
+  .contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* ==========================================================================
+   FAQ page 
+   ========================================================================== */
+  
+  .faq .content-wrapper {
+    justify-content: space-between;
+  }
+
+  .faq-content {
+    flex-basis: 47%;
+  }
+
+  .faq h2 {
+    width: 80%;
+  }
 }
 
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
+@media only screen and (min-width: 1200px){
+  /*DESKTOP styles go here*/
+
+  
 }
 
 /* ==========================================================================
