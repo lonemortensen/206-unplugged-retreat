@@ -176,7 +176,7 @@ footer .copyright {
 
 /* -------------------- Homepage Mobile Styles -------------------- */
 
-/* Introduction */
+/* Introduction - Hero */
 
 .hero-area {
   display: flex;
@@ -240,7 +240,7 @@ aside {
 }
 
 /* ==========================================================================
-   About page 
+   About page - Mobile
    ========================================================================== */
 
 /* Mission */
@@ -270,7 +270,7 @@ aside {
 }
 
 /* ==========================================================================
-   FAQ page 
+   FAQ page - Mobile
    ========================================================================== */
 
 .faq {
@@ -447,9 +447,7 @@ aside {
     width: 100%;
   }
 
-  /* Introduction */
-
-  .hero-area h1 {}
+  /* Introduction - Hero */
 
   /* Aside */
   
@@ -505,7 +503,7 @@ aside {
   }
 
   /* ==========================================================================
-   About page 
+   About page - Tablet
    ========================================================================== */
 
   .mission-content {
@@ -525,11 +523,11 @@ aside {
   .contact-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start; 
   }
 
   /* ==========================================================================
-   FAQ page 
+   FAQ page - Tablet 
    ========================================================================== */
   
   .faq .content-wrapper {
@@ -548,7 +546,89 @@ aside {
 @media only screen and (min-width: 1200px){
   /*DESKTOP styles go here*/
 
+  /*General styles*/
+
+  .content-wrapper { 
+    max-width: 960px;
+    margin: 100px 0; /*Note: Consider if necessary, cf. only for elements not otherwise targetted in css*/
+  }
   
+  /* Header */
+
+  header .content-wrapper {
+    width: 100%;    
+  }
+
+  header nav {
+    width: 15%;
+  }
+
+  /* Footer */
+
+  footer .content-wrapper {
+    width: 80%;
+    margin: 100px 0; 
+  }
+
+  /* Introduction - Hero */ 
+
+  .hero-area h1 {
+    width: 70%;
+  }
+
+  /* Aside */
+  
+  aside .content-wrapper {
+    justify-content: space-around;
+    width: 80%;
+  }
+
+  aside .form-description {
+    width: 30%;
+  }
+
+  aside .form {
+    width: 30%;
+  }
+
+  /* Features */
+
+  .features h2 {
+    width: 90%;
+    margin-bottom: 90px;
+  }
+
+  .features article {
+    flex-basis: 33%;
+  }
+
+  /* Reviews */
+
+  .reviews .review-text {
+    width: 40%;
+    margin-left: 25px;
+  }
+
+  /* ==========================================================================
+   About page - Desktop
+   ========================================================================== */
+
+  .mission h2,
+  .contact-section .content-wrapper h2 {
+    width: 95%;
+  }
+
+  /* ==========================================================================
+   FAQ page - Desktop
+   ========================================================================== */
+
+  .faq-content {
+    flex-basis: 45%;
+  }
+
+  .faq h2 {
+    width: 80%;
+  }
 }
 
 /* ==========================================================================
