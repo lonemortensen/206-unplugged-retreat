@@ -97,7 +97,7 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-/* General styles */ 
+/* Global styles */ 
 
 html {
   font-size: 16px;
@@ -137,15 +137,15 @@ h4 {
 
 p {
   font-size: 0.875em; 
-  line-height: 1.285; /* line-height 18pt / font-size 14pt = 1.285 */
+  line-height: 1.285; /* leading 18pt / font-size 14pt = 1.285 */
 }
 
 img {
-
+  width: 100%;
 }
 
 figure {
-
+  margin: 0;
 }
 
 address {
@@ -180,6 +180,14 @@ header .content-wrapper {
   align-items: center;
   flex-flow: row wrap;
   margin: 0;
+}
+
+header figure {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
 }
 
 header .header-divider { 
@@ -219,7 +227,7 @@ footer .content-wrapper {
   margin: 50px 0;
 }
 
-footer .social {
+footer .social { /* Why do I have flex here? */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -248,9 +256,15 @@ footer .copyright {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
+  min-height: 500px;
+  background-image: url('../img/jake-melara-30679-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .hero-area h1 {
+  margin: 0;
   font-family: 'Poppins', sans-serif;
   font-size: 2.25em;
   font-weight: 400;
@@ -300,6 +314,10 @@ input[type=button] {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background-image: url('../img/rawpixel-800820-unsplash1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .features h2 {
@@ -335,11 +353,16 @@ input[type=button] {
 }
 
 .reviews h2 {
+  margin: 25px 0;
   line-height: 1;
 }
 
-.reviews img { /* Consider adding bottom margin to h2 instead */
-  margin: 25px 0;
+.reviews figure { 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
 }
 
 .reviews h3 {
@@ -366,10 +389,6 @@ input[type=button] {
 }
 
 /* Contact */
-
-.map figure {
-  width: 100%;
-}
 
 .contact-section {
   display: flex;
@@ -545,6 +564,10 @@ input[type=button] {
     justify-content: space-between;
   }
 
+  header figure {
+    width: 30%;
+  }
+
   header .header-divider {
     display: none;
   }
@@ -568,6 +591,7 @@ input[type=button] {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
   }
 
   footer h4 {
@@ -584,6 +608,10 @@ input[type=button] {
   }
 
   /* Introduction - Hero - Tablet */
+
+  .hero-area {
+    min-height: 600px;
+  }
 
   .hero-area h1 {
     margin: 0;
@@ -639,6 +667,10 @@ input[type=button] {
     justify-content: space-between;
     margin-top: 20px;
   }
+  
+  .reviews figure {
+    width: 48%;
+  }
 
   .reviews img {
     margin: 0;
@@ -650,6 +682,7 @@ input[type=button] {
 
   .reviews h3 {
     width: 75%;
+    margin: 0;
   }
 
   /* ==========================================================================
@@ -740,6 +773,10 @@ input[type=button] {
   header .content-wrapper {
     width: 100%;    
   }
+  
+  header figure {
+    width: 24%;
+  }
 
   header nav {
     width: 15%;
@@ -797,6 +834,10 @@ input[type=button] {
     margin-left: 25px;
   }
 
+  .reviews figure {
+    width: 55%;
+  }
+
   /* ==========================================================================
    About page - Desktop
    ========================================================================== */
@@ -804,6 +845,10 @@ input[type=button] {
   .mission h2,  
   .contact-section .content-wrapper h2 {
     width: 95%;
+  }
+
+  .contact-content h4 {
+    font-size: 1.875em;
   }
 
   /* ==========================================================================
@@ -816,6 +861,16 @@ input[type=button] {
 
   .faq h2 {
     width: 80%;
+    font-size: 3em;
+  }
+
+  .faq h4, .faq p {
+    font-size: 1.125em;
+    line-height: 1;
+  }
+
+  .faq h4 {
+    font-weight: 500;
   }
 }
 
