@@ -321,7 +321,7 @@ input[type=button] {
 }
 
 .features h2 {
-  margin-bottom: 45px;
+  margin-bottom: 35px;
   line-height: 1.2;
 }
 
@@ -337,6 +337,11 @@ input[type=button] {
   width: 63%; 
   margin: 25px 0;
   text-align: center;
+}
+
+.features i {
+  font-size: 3.75em;
+  margin-bottom: 40px;
 }
 
 .features p {
@@ -657,7 +662,7 @@ input[type=button] {
   /* Features - Tablet */ 
 
   .features h2 {
-    margin: 0 0 35px 0;
+    margin: 0 0 15px 0;
   }
 
   .features article {
@@ -840,7 +845,7 @@ input[type=button] {
 
   .features h2 {
     width: 90%;
-    margin-bottom: 90px;
+    margin-bottom: 70px;
   }
 
   .features article {
