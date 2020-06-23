@@ -223,21 +223,32 @@ footer {
 }
 
 footer .content-wrapper { 
-  width: 55%;
+  width: 60%;
   margin: 50px 0;
 }
 
-footer .social { /* Why do I have flex here? */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+footer .social { 
   margin: 45px 0;
 } 
 
 footer .social-icons {
   display: flex;
   justify-content: space-around;
+  align-items: center; 
+}
+
+footer .social-icons p {
+  display: flex;
+  justify-content: center;
   align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background: #527158;
+}
+
+footer .social-icons i {
+  font-size: 1.125em;
 }
 
 footer p {
@@ -616,12 +627,18 @@ input[type=button] {
   }
 
   footer h4 {
+    margin-bottom: 40px;
     font-size: 1.5em;
     line-height: 1.2;
   }
 
   footer .social { 
     margin: 0;
+  }
+
+  footer .social-icons {
+    width: 12.5em;
+    justify-content: space-between;
   }
 
   footer .copyright {
@@ -817,7 +834,7 @@ input[type=button] {
   footer h4 {
     font-size: 1.875em;
   }
-  
+
   /* Introduction - Hero - Desktop */ 
 
   .hero-area h1 {
