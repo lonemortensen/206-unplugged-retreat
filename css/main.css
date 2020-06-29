@@ -97,6 +97,7 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
 /* Global styles */ 
 
 html {
@@ -137,7 +138,7 @@ h4 {
 
 p {
   font-size: 0.875em; 
-  line-height: 1.285; /* leading 18pt / font-size 14pt = 1.285 */
+  line-height: 1.285; 
 }
 
 img {
@@ -157,7 +158,7 @@ address {
   margin: 50px 0;
 }
 
-/* -------------------- Base Header - Footer Styles -------------------- */
+/* -------------------- Base Header-Footer Styles -------------------- */
 
 header,
 footer {
@@ -182,12 +183,12 @@ header .content-wrapper {
   margin: 0;
 }
 
-header figure {
-  width: 60%;
+header figure {  
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  width: 60%;
 }
 
 header .header-divider { 
@@ -204,7 +205,7 @@ header nav {
   flex-flow: row wrap;
   width: 60%; 
   font-size: 1.125em;
-  font-weight: 700; /* 700 = bold */
+  font-weight: 700; 
   text-align: center;
 }
 
@@ -212,6 +213,7 @@ header nav ul {
   display: flex;
   justify-content: space-around;
   width: 100%;
+  margin: 0;
   padding: 0; 
   text-transform: uppercase;
 }
@@ -228,8 +230,12 @@ footer .content-wrapper {
 }
 
 footer .social { 
-  margin: 45px 0;
+  margin: 45px 0 0 0;
 } 
+
+footer p {
+  margin: 0;
+}
 
 footer .social-icons {
   display: flex;
@@ -249,10 +255,6 @@ footer .social-icons p {
 
 footer .social-icons i {
   font-size: 1.125em;
-}
-
-footer p {
-  margin: 0;
 }
 
 footer .copyright {
@@ -282,7 +284,7 @@ footer .copyright {
   line-height: 1.2; 
 }
 
-/* Aside */
+/* Form - Aside */
 
 aside {
   display: flex;
@@ -291,6 +293,14 @@ aside {
   flex-flow: row wrap;
   background-color: #527158;
 }
+
+ aside .content-wrapper {
+  margin-top: 30px;
+ }
+
+ aside h3 {
+  margin-top: 0;
+ }
 
 aside .form {
   margin-top: 30px;
@@ -332,6 +342,7 @@ input[type=button] {
 }
 
 .features h2 {
+  margin-top: 0;
   margin-bottom: 35px;
   line-height: 1.2;
 }
@@ -341,7 +352,6 @@ input[type=button] {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  padding: 10px 0;
 }
 
 .features article {
@@ -350,13 +360,13 @@ input[type=button] {
   text-align: center;
 }
 
-.features i {
-  font-size: 3.75em;
-  margin-bottom: 40px;
-}
-
 .features p {
   margin: 0;
+}
+
+.features i {
+  margin-bottom: 40px;
+  font-size: 3.75em;  
 }
 
 /* Reviews */
@@ -369,21 +379,25 @@ input[type=button] {
 }
 
 .reviews h2 {
-  margin: 25px 0;
+  margin: 0 0 25px 0;
   line-height: 1;
 }
 
-.reviews figure { 
-  width: 100%;
+.reviews figure {   
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  width: 100%;
 }
 
 .reviews h3 {
   width: 60%;
   line-height: 1.2;
+}
+
+.reviews p {
+  margin: 0;
 }
 
 /* ==========================================================================
@@ -401,10 +415,11 @@ input[type=button] {
 }
 
 .mission h2 {
+  margin: 0;
   line-height: 1.2;
 }
 
-/* Contact */
+/* Map */
 
 .map figure {
   width: 100%;
@@ -422,6 +437,8 @@ input[type=button] {
   left:0;
 }
 
+/* Contact */ 
+
 .contact-section {
   display: flex;
   justify-content: center;
@@ -431,6 +448,7 @@ input[type=button] {
 }
 
 .contact-section h2 {
+  margin: 0;
   line-height: 1.2;
 }
 
@@ -458,16 +476,17 @@ input[type=button] {
   margin: 50px 0 0 0;
 }
 
+.faq h2 {
+  margin: 0 0 40px 0;
+  line-height: 1;
+}
+
 .faq-content {
   margin-bottom: 50px;
 }
 
-.faq h2 {
-  margin-bottom: 40px;
-  line-height: 1;
-}
-
 .faq h4 { 
+  margin: 0 0 20px 0;
   line-height: 1.285;
 } 
 
@@ -565,7 +584,7 @@ input[type=button] {
    ========================================================================== */
 
 @media only screen and (min-width: 768px){  
-  /* TABLET styles go here*/
+  /* TABLET styles here*/
 
   /* General styles - Tablet */
 
@@ -591,9 +610,9 @@ input[type=button] {
     padding: 25px 0;
   }
 
-  header .content-wrapper {
-    width: 100%;
+  header .content-wrapper {    
     justify-content: space-between;
+    width: 100%;
   }
 
   header figure {
@@ -636,9 +655,9 @@ input[type=button] {
     margin: 0;
   }
 
-  footer .social-icons {
-    width: 12.5em;
+  footer .social-icons {    
     justify-content: space-between;
+    width: 12.5em;
   }
 
   footer .copyright {
@@ -669,6 +688,10 @@ input[type=button] {
   aside .form-description {
     width: 40%;
     margin: 0;
+  }
+
+  aside p {
+    margin: 20px 0;
   }
 
   aside .form {
@@ -703,7 +726,6 @@ input[type=button] {
   .reviews .review-content {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
   }
   
   .reviews figure {
@@ -723,9 +745,15 @@ input[type=button] {
     margin: 0;
   }
 
+  .reviews p {
+    margin: 15px 0 0 0;
+  }
+
   /* ==========================================================================
    About page - Tablet
    ========================================================================== */
+  
+  /* Mission - Tablet */
 
   .mission h2 {
     margin: 0;
@@ -742,9 +770,13 @@ input[type=button] {
     width: 47%;
   } 
 
+  /* Map - Tablet */
+
   .map figure {
-    padding-bottom: 45%; /* (psd) height/width x 100 = ratio */
+    padding-bottom: 45%; 
   }
+
+  /* Contact - Tablet */
 
   .contact-section .content-wrapper h2 {
     width: 80%;
@@ -755,7 +787,7 @@ input[type=button] {
     display: flex;
     justify-content: space-between;
     align-items: flex-start; 
-    margin-top: 30px;
+    margin-top: 10px;
   }
 
   .contact-content h4 {
@@ -768,16 +800,17 @@ input[type=button] {
   
   .faq .content-wrapper {
     justify-content: space-between;
-    margin: 100px 0 50px 0;
+    margin: 100px 0 70px 0;
   }
 
   .faq h2 {
     width: 80%;
-    margin: 0 0 20px 0;
+    margin: 0 0 30px 0;
   }
 
   .faq-content {
     flex-basis: 47%;
+    margin-bottom: 30px;
   }
 
   .faq h4 {
@@ -786,15 +819,20 @@ input[type=button] {
 }
 
 @media only screen and (min-width: 1200px){
-  /*DESKTOP styles go here*/
+  /*DESKTOP styles here*/
 
   /*General styles - Desktop */
 
   .content-wrapper { 
     max-width: 960px;
-    margin: 100px 0; /*Note: Consider if necessary, cf. only for elements not otherwise with margin in css*/
+    margin: 100px 0; 
   }
   
+  h2 {
+    font-size: 2.25em;
+    line-height: 1.2;
+  }
+
   h3 {
     font-size: 1.875em;
     line-height: 1.2;
@@ -803,11 +841,6 @@ input[type=button] {
   p {
     font-size: 1.125em;
     line-height: 1.333;  
-  }
-
-  h2 {
-    font-size: 2.25em;
-    line-height: 1.2;
   }
 
   /* Header - Desktop */
@@ -837,6 +870,10 @@ input[type=button] {
 
   /* Introduction - Hero - Desktop */ 
 
+  .hero-area .content-wrapper {
+    margin-top: 50px;
+  }
+  
   .hero-area h1 {
     width: 70%;
     font-size: 3.75em;
@@ -869,28 +906,44 @@ input[type=button] {
     flex-basis: 33%;
   }
 
+  .features .features-item-description {
+    width: 63%;
+  }
+
   /* Reviews - Desktop */
 
-  .reviews .review-text {
-    width: 40%;
-    margin-left: 25px;
+  .reviews h2 {
+    margin: 0 0 80px 0;
   }
 
   .reviews figure {
-    width: 55%;
+    width: 50%;
   }
+
+  .reviews .review-text {
+    width: 40%;
+  }  
 
   /* ==========================================================================
    About page - Desktop
    ========================================================================== */
-
+  
   .mission h2,  
   .contact-section .content-wrapper h2 {
     width: 95%;
+    font-size: 3em;
   }
 
+  /* Map - Desktop */
+
   .map figure {
-    padding-bottom: 38%; /* (psd) height/width x 100 = ratio */
+    padding-bottom: 38%; 
+  }
+
+  /* Contact - Desktop */
+
+  .contact-content {
+    margin: 0;
   }
 
   .contact-content h4 {
@@ -901,21 +954,23 @@ input[type=button] {
    FAQ page - Desktop
    ========================================================================== */
 
-  .faq-content {
-    flex-basis: 45%;
-  }
-
   .faq h2 {
     width: 80%;
     font-size: 3em;
   }
 
-  .faq h4, .faq p {
+  .faq-content {
+    flex-basis: 45%;
+  }
+
+  .faq h4, 
+  .faq p {
     font-size: 1.125em;
     line-height: 1;
   }
 
   .faq h4 {
+    margin: 0 0 15px 0;
     font-weight: 500;
   }
 }
