@@ -222,6 +222,7 @@ header nav ul {
 
 footer {
   text-align: center;
+  flex-direction: column;
 }
 
 footer .content-wrapper { 
